@@ -1,0 +1,57 @@
+{
+	"name": "academy",
+	"version": "0.0.1",
+	"engines": [
+		"node >= 0.8.0"
+	],
+	"main": "server.js",
+	"dependencies": {
+		"jade": "*",
+		"jade-ext": "latest",
+		"express": "~3.x",
+		"compound": ">= 1.1.0",
+		"jugglingdb": ">= 0.1.0",
+		"jugglingdb-postgres": ">= 0",
+		"coffee-script": ">= 1.1.1",
+		"sass": "latest",
+		"seedjs": "latest",
+		"co-assets-compiler": "*",
+		"nock": "~0.27.2",
+		"bluebird": "~1.0.1",
+		"underscore": "~1.5.2",
+		"chai": "~1.8.1",
+		"kontroller": "0.0.11",
+		"superagent": "~0.16.0"
+	},
+	"devDependencies": {
+		"bunyan": "^1.2.3",
+		"co-generators": "*",
+		"grunt-angular-templates": "^0.5.5",
+		"grunt-cache-bust": "~0.2.0",
+		"grunt-contrib-compass": "~0.7.2",
+		"grunt-contrib-concat": "~0.5.0",
+		"grunt-contrib-copy": "~0.5.0",
+		"grunt-contrib-jade": "^0.12.0",
+		"grunt-contrib-jasmine": "~0.7.0",
+		"grunt-contrib-uglify": "~0.5.1",
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-jscs-checker": "^0.4.4",
+		"grunt-mocha-test": "^0.11.0",
+		"grunt-rev": "~0.1.0",
+		"grunt-shell": "~1.0.1",
+		"grunt-usemin": "~2.0.2",
+		"method-override": "^2.0.2",
+		"mocha": ">= 0",
+		"node-sass": "~0.8.1",
+		"nodeunit": "*",
+		"semicov": "*",
+		"should": ">= 0",
+		"sinon": "*",
+		"supertest": ">= 0",
+		"validator": "^3.18.1",
+		"validator-ext": "0.0.1"
+	},
+	"scripts": {
+		"test": "./node_modules/.bin/mocha --require tests/mocha-init.js tests/back/*/*.js"
+	}
+}

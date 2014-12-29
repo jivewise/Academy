@@ -1,0 +1,183 @@
+/* Hide scroll bar */
+html.modal-lock,
+body.modal-lock {
+    overflow: hidden;
+}
+
+div.modal-overlay {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: none;
+	overflow: auto;
+
+	text-align: center;
+
+	@include transition(opacity 0.2s linear);
+
+	opacity: .7;
+	background: rgba(33, 36, 46, 0.95);
+
+	-webkit-overflow-scrolling: touch;
+	-webkit-backface-visibility: hidden;
+}
+
+// the width of the modal should either be 300px or 600px
+
+div.modal {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	background: white;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin-left: 0;
+
+	z-index: 1001;
+
+	div.header {
+		z-index: 1002;
+		width: 100%;
+		height: 60px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include box-sizing(border-box);
+		padding: 0 10px;
+
+		line-height: 60px;
+		border-bottom: 1px solid #eee;
+		span.title {
+			display: inline-block;
+			font-size: 20px;
+			font-weight: bold;
+			a.back-to-chapter-list {
+				margin-right: 10px;
+			}
+		}
+		a.close {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			@extend .fa;
+			@extend .fa-close;
+		}
+	}
+	div.content {
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		@include box-sizing(border-box);
+		padding: 60px 10px 0;
+
+		overflow: hidden;
+		div.list {
+			height: 100%;
+			overflow: auto;
+			ul {
+				li {
+					cursor: pointer;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					// for multiple selection with checkboxes
+					label {
+						display: block;
+						span {
+							display: inline-block;
+						}
+						span.checkbox {
+							text-align: center;
+							width: 10%;
+						}
+						span.id {
+							width: 10%;
+						}
+						span.name {
+							width: 80%;
+						}
+					}
+				}
+				li.active, li:hover {
+					@include list-item-hover;
+				}
+			}
+		}
+		p {
+			line-height: 40px;
+		}
+	}
+
+	div.button-panel {
+		z-index: 1002;
+		width: 100%;
+		height: 60px;
+		background: white;
+
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		@include box-sizing(border-box);
+		padding: 10px;
+
+		border-top: 1px solid #eee;
+		text-align: right;
+		a.cancel {
+			@extend .button;
+			@extend .button-plain;
+			margin-left: 10px;
+		}
+		a.submit {
+			@extend .button;
+			@extend .button-primary;
+			margin-left: 10px;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	div.modal {
+		width: 300px;
+		height: 90%;
+		max-height: 600px;
+
+		left: 50%;
+		top: 5%;
+		margin-left: -150px;
+	}
+}
+
+
+// since the max width of the modal is 600px
+@media (min-width: 680px) {
+	div.modal {
+		width: 600px;
+
+		margin-left: -300px; // added a padding below, so 300+20=320
+		div.header {
+			span.close {
+			}
+		}
+
+	}
+}

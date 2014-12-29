@@ -1,0 +1,40 @@
+{
+	"method": "POST",
+	"path": "/api/users/details",
+	"data": {"users": "847", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": {
+		"goal": {
+			"id": "1079",
+			"userId": "847",
+			"username": "hulk@baidu.com",
+			"minutes": "120",
+			"start_dt": "2014-12-10 00:00:00",
+			"end_dt": "2014-12-10 23:59:59"
+		},
+		"userProgress": {
+			"user_id": "847",
+			"section_id": "598",
+			"content_type": "lesson",
+			"content_id": "0",
+			"wrong_answers": "",
+			"wrong_spell": null,
+			"content_completed": "0",
+			"chapter_id": "38"
+		},
+		"scores": [
+			{
+				"user_id": "847",
+				"section_id": "238",
+				"score": "100",
+				"questions_answered": "19",
+				"correct_answers": "19",
+				"id": "1997",
+				"date_added": "2014-12-10 04:35:37",
+				"date_modified": "2014-12-10 04:35:37",
+				"chapter_number": "1"
+			}
+		],
+		"averages": [{"section_id": "238", "average": "99.4"}]
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"method": "POST",
+	"path": "/api/users/getUserAchievements",
+	"data": {"user_id": "847", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [
+		{
+			"id": "27",
+			"name": "Section Completion",
+			"image": "1311",
+			"description": "Complete one section",
+			"date_added": "2014-12-10 04:33:47"
+		},
+		{
+			"id": "26",
+			"name": "Studious Awardable",
+			"image": "1254",
+			"description": "Logged for once",
+			"date_added": "2014-12-10 04:32:36"
+		}
+	]
+}

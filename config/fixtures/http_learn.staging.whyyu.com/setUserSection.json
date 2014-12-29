@@ -1,0 +1,11 @@
+{
+	"method": "POST",
+	"path": "/api/users/setCurrentSection",
+	"data": {
+		"user_id": "845",
+		"section_id": "598",
+		"chapter_id": "38",
+		"token": "cee80465972555475599b2fb3f81c1593acfd6c6"
+	},
+	"code": 200
+}

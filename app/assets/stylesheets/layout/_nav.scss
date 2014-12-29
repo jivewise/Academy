@@ -1,0 +1,94 @@
+//*:link, *:visited, *:hover, *:active, *:focus {
+//	@include transition(color .1s linear, background-color .1s linear, border-color .1s linear);
+//}
+@import "compass/css3/user-interface";
+$nav-height: 50px;
+
+div.nav-wrapper {
+	background: #2c3e50;
+	height: $nav-height;
+	line-height: $nav-height;
+	text-align: center;
+	position: relative;
+	ul {
+		overflow: hidden;
+		height: $nav-height;
+		li {
+			display: none;
+			float: left;
+			@include user-select(none);
+			a {
+				display: block;
+				padding: 0 10px;
+				color: #ccc;
+				text-decoration: none;
+			}
+		}
+		li.active, li:hover {
+			a {
+				background: #000;
+				color: #fff;
+			}
+		}
+		li.logo {
+			display: block;
+			padding: 0 10px;
+		}
+		li.logout {
+			float: right;
+		}
+		li.btn-mini-nav {
+			display: block;
+			float: right;
+			a {
+				padding: 0 20px;
+				font-size: 28px;
+				color: #eee;
+			}
+		}
+	}
+	div.mini-nav-wrapper {
+		display: none;
+		position: absolute;
+		width: 100%;
+		background: #2c3e50;
+		z-index: 2;
+		border-top: 1px solid #0c242f;
+		ul {
+			height: auto;
+			border-top: 1px solid #435575;
+			li {
+				float: none;
+				display: block;
+			}
+			li.products {
+				border-bottom: 1px solid #0c242f;
+			}
+			li.logout {
+				border-top: 1px solid #435575;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	div.nav-wrapper {
+		ul {
+			li {
+				display: block;
+				a {
+					padding: 0 30px;
+				}
+			}
+			li.logo {
+				padding: 0 20px;
+			}
+			li.btn-mini-nav {
+				display: none;
+			}
+		}
+		div.mini-nav-wrapper {
+			display: none;
+		}
+	}
+}

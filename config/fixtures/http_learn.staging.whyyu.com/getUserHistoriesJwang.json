@@ -1,0 +1,108 @@
+{
+	"method": "POST",
+	"path": "/userHistory/getRecentActivities/cee80465972555475599b2fb3f81c1593acfd6c6",
+	"data": {"user_ids": ["38"], "length": 10},
+	"code": 200,
+	"response": [
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3110",
+			"entry_time": "1347774518",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Section 3 -  Personal possessions completed.",
+			"id": "3071",
+			"entry_time": "1346912209",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3070",
+			"entry_time": "1346912100",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3069",
+			"entry_time": "1346748646",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3066",
+			"entry_time": "1346392238",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Section 2 - People I know completed.",
+			"id": "3065",
+			"entry_time": "1346326871",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Section 1 - Describing things completed.",
+			"id": "3064",
+			"entry_time": "1346326722",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "\u60a8\u672c\u6b21\u767b\u5f55\u83b7\u5f97\u7684\u5206\u6570",
+			"id": "3062",
+			"entry_time": "1346326475",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3050",
+			"entry_time": "1345832257",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		},
+		{
+			"user_id": "38",
+			"change_text": "Awarded 10 points for daily login.",
+			"id": "3046",
+			"entry_time": "1345288524",
+			"type": null,
+			"info": null,
+			"avatar": "avatars\/cow.png",
+			"displayName": "\u738b\u6676"
+		}
+	]
+}

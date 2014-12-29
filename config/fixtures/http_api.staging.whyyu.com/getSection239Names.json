@@ -1,0 +1,7 @@
+{
+	"method": "POST",
+	"path": "/sectionNames?writer=json",
+	"data": {"sections": "239", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [{"id": "239", "chapter_id": "38", "number": "5", "name": "Numbers (1-10)", "image": "grade1n\/1.png"}]
+}

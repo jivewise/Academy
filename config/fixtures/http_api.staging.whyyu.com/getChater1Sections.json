@@ -1,0 +1,188 @@
+{
+	"method": "GET",
+	"path": "/products/38/chapters/38?writer=json",
+	"data": {"token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [
+		{
+			"id": "38",
+			"number": "1",
+			"name": "\u4e00\u5e74\u7ea7 \u7b2c\u4e00\u8282",
+			"alternate_name": "\u7b2c\u4e00\u7ae0 \u7b2c\u4e00\u8282",
+			"level": "1",
+			"theme": " ",
+			"imageurl": "grade1n\/Aboy.png",
+			"description": " ",
+			"completed": "1",
+			"product_chapter_name": "\u4e00\u5e74\u7ea7 \u7b2c\u4e00\u8282",
+			"product_chapter_order": "1",
+			"section": {
+				"section_236": {
+					"id": "236",
+					"chapter_id": "38",
+					"number": "1",
+					"name": "Hello!",
+					"is_dynamic": "0",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Hello-chinese.png",
+					"release_date": null
+				},
+				"section_598": {
+					"id": "598",
+					"chapter_id": "38",
+					"number": "2",
+					"name": "Good morning!",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Goodmorning1.png",
+					"release_date": null
+				},
+				"section_604": {
+					"id": "604",
+					"chapter_id": "38",
+					"number": "3",
+					"name": "What is your name?",
+					"is_dynamic": "0",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/What-is-your-name.png",
+					"release_date": null
+				},
+				"section_238": {
+					"id": "238",
+					"chapter_id": "38",
+					"number": "4",
+					"name": "Animals 1",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Cow.png",
+					"release_date": null
+				},
+				"section_239": {
+					"id": "239",
+					"chapter_id": "38",
+					"number": "5",
+					"name": "Numbers (1-10)",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/1.png",
+					"release_date": null
+				},
+				"section_599": {
+					"id": "599",
+					"chapter_id": "38",
+					"number": "6",
+					"name": "People",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Aboy.png",
+					"release_date": null
+				},
+				"section_1039": {
+					"id": "1039",
+					"chapter_id": "38",
+					"number": "7",
+					"name": "Review - Listening",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "Practice your listenning skill",
+					"image": "general\/play-audio1.png",
+					"release_date": null
+				},
+				"section_1129": {
+					"id": "1129",
+					"chapter_id": "38",
+					"number": "8",
+					"name": "Conversation - Greetings and Introduction",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "",
+					"image": "sections\/1-1-8 greeting-eachother.jpg",
+					"release_date": null
+				},
+				"section_259": {
+					"id": "259",
+					"chapter_id": "38",
+					"number": "9",
+					"name": "Colors",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Black.png",
+					"release_date": null
+				},
+				"section_241": {
+					"id": "241",
+					"chapter_id": "38",
+					"number": "10",
+					"name": "Classroom",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Teacher.png",
+					"release_date": null
+				},
+				"section_600": {
+					"id": "600",
+					"chapter_id": "38",
+					"number": "11",
+					"name": "This, that, these, those",
+					"is_dynamic": "0",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/This-is-a-teacher.png",
+					"release_date": null
+				},
+				"section_602": {
+					"id": "602",
+					"chapter_id": "38",
+					"number": "12",
+					"name": "Classroom items",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Ruler.png",
+					"release_date": null
+				},
+				"section_603": {
+					"id": "603",
+					"chapter_id": "38",
+					"number": "13",
+					"name": "Review",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/Its-awindow.png",
+					"release_date": null
+				},
+				"section_874": {
+					"id": "874",
+					"chapter_id": "38",
+					"number": "14",
+					"name": "Article - Cats and dogs",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "undefined",
+					"image": "grade1n\/There-are-3-white-cats-and-5-yellow-dogs.png",
+					"release_date": null
+				},
+				"section_1040": {
+					"id": "1040",
+					"chapter_id": "38",
+					"number": "15",
+					"name": "Review - Listening",
+					"is_dynamic": "1",
+					"subject": "",
+					"description": "Practice your listenning skill",
+					"image": "general\/play-audio1.png",
+					"release_date": null
+				}
+			}
+		}
+	]
+}

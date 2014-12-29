@@ -1,0 +1,14 @@
+$footer-height: 60px;
+
+footer.footer-wrapper {
+	text-align: center;
+	height: $footer-height;
+	line-height: $footer-height;
+	background: #222;
+	color: #aaa;
+	font-size: 12px;
+}
+// this helps to prevent the sticky footer from overlapping the content part
+div.page-wrapper:after {
+	height: $footer-height;
+}

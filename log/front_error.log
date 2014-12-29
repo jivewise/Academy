@@ -1,0 +1,25 @@
+{
+	"mode": "onerror",
+	"message": "Uncaught ReferenceError: academy is not defined",
+	"url": "http://0.0.0.0:3000/login",
+	"stack": [
+		{
+			"url": "http://0.0.0.0:3000/login",
+			"line": "1",
+			"func": "?"
+		}
+	],
+	"useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+}{
+	"mode": "onerror",
+	"message": "Uncaught ReferenceError: academy is not defined",
+	"url": "http://0.0.0.0:3000/login",
+	"stack": [
+		{
+			"url": "http://0.0.0.0:3000/login",
+			"line": "1",
+			"func": "?"
+		}
+	],
+	"useragent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36"
+}

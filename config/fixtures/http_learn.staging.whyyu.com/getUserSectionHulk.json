@@ -1,0 +1,20 @@
+{
+	"method": "POST",
+	"path": "/api/users/getCurrentSection",
+	"data": {"user_id": "847", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": {
+		"user_id": "847",
+		"section_id": "598",
+		"content_type": "lesson",
+		"content_id": "0",
+		"wrong_answers": "",
+		"wrong_spell": null,
+		"content_completed": "0",
+		"chapter_id": "38",
+		"product": "whyyu",
+		"section_number": "2",
+		"section_name": "Good morning!",
+		"section_image": "grade1n\/Goodmorning1.png"
+	}
+}

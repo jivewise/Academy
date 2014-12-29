@@ -1,0 +1,44 @@
+form#login {
+	width: 300px;
+	position: relative;
+	left: 50%;
+	margin-left: -150px;
+	h1 {
+		text-align: center;
+	}
+	input#user, input#pass {
+		display: block;
+		width: 100%;
+		height: 30px;
+		text-indent: 5px;
+		margin: 10px 0;
+		padding: 0;
+	}
+	input#remember {
+		display: inline;
+		width: auto;
+		margin: 10px 10px 10px 0;
+	}
+	label.remember {
+		height: 30px;
+		line-height: 30px;
+		margin: 10px 10px 10px 0;
+	}
+	input#submit {
+		width: 100%;
+		@extend .button;
+		@extend .button-primary;
+		@extend .button-block;
+		@extend .button-large;
+	}
+}
+
+// hide the menu on login page for now; they should not appear later
+div.nav-wrapper {
+	ul {
+		li.users, li.groups, li.products, li.logout {
+			display: none;
+		}
+	}
+}
+

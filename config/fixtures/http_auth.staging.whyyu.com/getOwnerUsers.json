@@ -1,0 +1,96 @@
+{
+	"method": "GET",
+	"path": "/applications/whyyu_create/owner/38/users/?writer=json",
+	"data": {"token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [
+		{
+			"id": "38",
+			"username": "jwang",
+			"role": "",
+			"fullname": "Jing Wang",
+			"email": "jwang@jivewise.com",
+			"phone": "1",
+			"date_created": "0000-00-00 00:00:00",
+			"passport": {
+				"id": "889",
+				"application": "whyyu_create",
+				"code": "e2f516256c",
+				"num_days_valid": "30",
+				"start_dt": "2014-11-27 00:00:00",
+				"created_dt": "2014-11-27 16:16:34",
+				"activated_dt": null,
+				"affiliate_id": null,
+				"owner_id": "38",
+				"user_id": "38",
+				"username": "jwang"
+			}
+		},
+		{
+			"id": "845",
+			"username": "captain@baidu.com",
+			"role": null,
+			"fullname": "Captain America",
+			"email": "captain@baidu.com",
+			"phone": "12345678910",
+			"date_created": "2014-12-10 10:55:09",
+			"passport": {
+				"id": "892",
+				"application": "whyyu_create",
+				"code": "b977fa4f43",
+				"num_days_valid": "30",
+				"start_dt": "2014-12-10 10:55:09",
+				"created_dt": "2014-11-27 16:16:34",
+				"activated_dt": "2014-12-10 10:55:09",
+				"affiliate_id": null,
+				"owner_id": "38",
+				"user_id": "845",
+				"username": "captain@baidu.com"
+			}
+		},
+		{
+			"id": "846",
+			"username": "iron@baidu.com",
+			"role": null,
+			"fullname": "Iron Man",
+			"email": "Iron@baidu.com",
+			"phone": "12345678910",
+			"date_created": "2014-12-10 10:56:13",
+			"passport": {
+				"id": "893",
+				"application": "whyyu_create",
+				"code": "46c3cafe9a",
+				"num_days_valid": "30",
+				"start_dt": "2014-12-10 10:56:13",
+				"created_dt": "2014-11-27 16:16:34",
+				"activated_dt": "2014-12-10 10:56:13",
+				"affiliate_id": null,
+				"owner_id": "38",
+				"user_id": "846",
+				"username": "iron@baidu.com"
+			}
+		},
+		{
+			"id": "847",
+			"username": "hulk@baidu.com",
+			"role": null,
+			"fullname": "Hulk",
+			"email": "hulk@baidu.com",
+			"phone": "12345678910",
+			"date_created": "2014-12-10 10:57:33",
+			"passport": {
+				"id": "894",
+				"application": "whyyu_create",
+				"code": "2d51ef2619",
+				"num_days_valid": "30",
+				"start_dt": "2014-12-10 10:57:33",
+				"created_dt": "2014-11-27 16:16:34",
+				"activated_dt": "2014-12-10 10:57:33",
+				"affiliate_id": null,
+				"owner_id": "38",
+				"user_id": "847",
+				"username": "hulk@baidu.com"
+			}
+		}
+	]
+}

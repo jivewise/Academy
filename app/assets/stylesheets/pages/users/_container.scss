@@ -1,0 +1,52 @@
+$zen-column-count: 1;
+$zen-gutter-width: 20px;
+
+@media (max-width: 1023px) {
+
+	div.content-wrapper {
+		margin: 0 0 20px 0;
+		@include zen-grid-container;
+		div#left-ctrl {
+			@include zen-grid-item(1,1);
+		}
+		div#middle-ctrl {
+			@include zen-clear(both);
+			@include zen-grid-item(1,1);
+		}
+		div#right-ctrl {
+			@include zen-clear(both);
+			@include zen-grid-item(1,1);
+		}
+	}
+}
+
+$zen-column-count: 4;
+$zen-gutter-width: 60px;
+
+@media (min-width: 1024px) {
+
+	div.content-wrapper {
+		margin: 20px 0;
+		@include zen-grid-container;
+		div#left-ctrl {
+			@include zen-grid-item(1,1);
+		}
+		div#middle-ctrl {
+			@include zen-grid-item(3,2);
+		}
+		div#right-ctrl {
+			@include zen-grid-item(3,2);
+		}
+	}
+}
+
+
+// give the current nav item a darker background
+div.nav-wrapper {
+	ul li.users {
+		a {
+			background: #000;
+			color: #fff;
+		}
+	}
+}

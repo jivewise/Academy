@@ -1,0 +1,18 @@
+{
+	"method": "GET",
+	"path": "/products/available?writer=json",
+	"data": {"token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [
+		{
+			"id": "38",
+			"name_zh": "Whyyu \u5c0f\u5b66\u82f1\u8bed",
+			"name_en": "Whyyu Primary English",
+			"image_url": "avatars\/snake.png",
+			"description": "",
+			"number": "4",
+			"keyword": "whyyu",
+			"chapters": "36"
+		}
+	]
+}

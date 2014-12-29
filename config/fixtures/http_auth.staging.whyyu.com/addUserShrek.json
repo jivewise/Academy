@@ -1,0 +1,27 @@
+{
+	"method": "POST",
+	"path": "/applications/whyyu_create/owner/38/new-user/?writer=json",
+	"data": {
+		"fullname": "shrek",
+		"email": "shrek@shrek.shrek",
+		"phone": "123",
+		"notify_user": true,
+		"token": "cee80465972555475599b2fb3f81c1593acfd6c6",
+		"set_password": true,
+		"password": "shrek",
+		"confirm": "shrek"
+	},
+	"code": 201,
+	"response": {
+		"id": "848",
+		"username": "shrek@shrek.shrek",
+		"password": "shrek",
+		"application": "whyyu_create",
+		"role": null,
+		"fullname": "shrek",
+		"email": "shrek@shrek.shrek",
+		"phone": "123",
+		"date_created": "2014-12-10 22:33:09",
+		"notify_user": true
+	}
+}

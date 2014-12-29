@@ -1,0 +1,27 @@
+{
+	"method": "POST",
+	"path": "/tokens?writer=json",
+	"data": {
+		"apiKey": "e9220df5098a43a6fad95d6ee980a2448baabab1",
+		"apiSecret": "691bd1ac7f7f30420153788b2d1ecfd7dc29f3bd",
+		"username": "jwang",
+		"password": "newtest",
+		"ipAddress": "127.0.0.1",
+		"rememberMe": "false"
+	},
+	"code": 201,
+	"response": {
+		"id": "4947",
+		"value": "cee80465972555475599b2fb3f81c1593acfd6c6",
+		"date_updated": "2014-12-10 05:55:20",
+		"token_length": "1800",
+		"application": "whyyu_create",
+		"ip_address": "127.0.0.1",
+		"user_id": "38",
+		"groupMemberships": "9,10,69,70",
+		"groupMembersName": "{\"9\":\"admin\",\"10\":\"passportAdmin\",\"69\":\"class 1\",\"70\":\"class 2\"}",
+		"passportValidNumDays": 17,
+		"passportExpired": false,
+		"username": "jwang"
+	}
+}

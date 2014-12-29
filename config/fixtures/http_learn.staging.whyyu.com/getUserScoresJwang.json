@@ -1,0 +1,150 @@
+{
+	"method": "POST",
+	"path": "/api/users/details",
+	"data": {"users": "38", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": {
+		"goal": {
+			"id": "99",
+			"userId": "38",
+			"username": "jwang",
+			"minutes": "180",
+			"start_dt": "2012-09-02 00:00:00",
+			"end_dt": "2012-09-08 23:59:59"
+		},
+		"userProgress": {
+			"user_id": "38",
+			"section_id": "238",
+			"content_type": "lesson",
+			"content_id": "0",
+			"wrong_answers": "",
+			"wrong_spell": null,
+			"content_completed": "0",
+			"chapter_id": "38"
+		},
+		"scores": [
+			{
+				"user_id": "38",
+				"section_id": "236",
+				"score": "94.4444",
+				"questions_answered": "18",
+				"correct_answers": "17",
+				"id": "1475",
+				"date_added": "2012-05-22 05:57:23",
+				"date_modified": "2012-09-16 05:52:15",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "793",
+				"score": "100",
+				"questions_answered": "5",
+				"correct_answers": "5",
+				"id": "1877",
+				"date_added": "2012-09-06 06:16:49",
+				"date_modified": "2012-09-06 06:16:49",
+				"chapter_number": "21"
+			},
+			{
+				"user_id": "38",
+				"section_id": "792",
+				"score": "92.8571",
+				"questions_answered": "14",
+				"correct_answers": "13",
+				"id": "1876",
+				"date_added": "2012-08-30 11:41:11",
+				"date_modified": "2012-08-30 11:41:11",
+				"chapter_number": "21"
+			},
+			{
+				"user_id": "38",
+				"section_id": "379",
+				"score": "87.5",
+				"questions_answered": "8",
+				"correct_answers": "7",
+				"id": "1875",
+				"date_added": "2012-08-30 11:38:42",
+				"date_modified": "2012-08-30 11:38:42",
+				"chapter_number": "21"
+			},
+			{
+				"user_id": "38",
+				"section_id": "600",
+				"score": "91.6667",
+				"questions_answered": "12",
+				"correct_answers": "11",
+				"id": "1844",
+				"date_added": "2012-08-03 07:53:12",
+				"date_modified": "2012-08-03 08:11:26",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "602",
+				"score": "100",
+				"questions_answered": "7",
+				"correct_answers": "7",
+				"id": "1845",
+				"date_added": "2012-08-03 07:53:55",
+				"date_modified": "2012-08-03 07:53:55",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "599",
+				"score": "100",
+				"questions_answered": "8",
+				"correct_answers": "8",
+				"id": "1843",
+				"date_added": "2012-08-03 07:52:21",
+				"date_modified": "2012-08-03 07:52:21",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "874",
+				"score": "100",
+				"questions_answered": "2",
+				"correct_answers": "2",
+				"id": "1820",
+				"date_added": "2012-07-31 07:21:43",
+				"date_modified": "2012-07-31 07:21:43",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "241",
+				"score": "100",
+				"questions_answered": "6",
+				"correct_answers": "6",
+				"id": "1819",
+				"date_added": "2012-07-29 09:29:49",
+				"date_modified": "2012-07-29 09:29:49",
+				"chapter_number": "1"
+			},
+			{
+				"user_id": "38",
+				"section_id": "238",
+				"score": "100",
+				"questions_answered": "19",
+				"correct_answers": "19",
+				"id": "1566",
+				"date_added": "2012-06-01 05:00:55",
+				"date_modified": "2012-07-29 09:29:13",
+				"chapter_number": "1"
+			}
+		],
+		"averages": [
+			{"section_id": "236", "average": "99.0"},
+			{"section_id": "238", "average": "99.4"},
+			{"section_id": "241", "average": "98.2"},
+			{"section_id": "379", "average": "92.5"},
+			{"section_id": "599", "average": "99.1"},
+			{"section_id": "600", "average": "95.5"},
+			{"section_id": "602", "average": "98.8"},
+			{"section_id": "792", "average": "97.1"},
+			{"section_id": "793", "average": "100.0"},
+			{"section_id": "874", "average": "100.0"}
+		]
+	}
+}

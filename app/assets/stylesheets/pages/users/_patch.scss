@@ -1,0 +1,38 @@
+$zen-column-count: 4;
+$zen-gutter-width: 60px;
+
+@media (min-width: 1024px) {
+
+	div.is-list-view {
+		@include zen-grid-container;
+		div#left-ctrl {
+			@include zen-grid-item(3,1);
+			div.list {
+				ul {
+					li {
+						span.id {
+							width: 10%;
+						}
+						span.name {
+							width: 25%;
+						}
+						span.section {
+							display: inline-block;
+							width: 55%;
+						}
+						span.score {
+							display: inline-block;
+							width: 10%;
+						}
+					}
+				}
+			}
+		}
+		div#middle-ctrl {
+			@include zen-grid-item(1,4);
+		}
+		div#right-ctrl {
+			@include zen-grid-item(1,4);
+		}
+	}
+}

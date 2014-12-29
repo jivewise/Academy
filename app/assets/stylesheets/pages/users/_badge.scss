@@ -1,0 +1,60 @@
+.student-badge {
+	.badge-top {
+		width: 0;
+		border-bottom: 20px solid #c30;
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+	}
+	.badge-bottom{
+		width: 0;
+		border-top: 20px solid #c30;
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+	}
+	.badge-middle {
+		font-weight:normal;
+		width: 70px;
+		height: 40px;
+		line-height:40px;
+		background-color: #c30;
+		text-align:center;
+		text-transform:uppercase;
+		font-size:30px;
+		.second-letter {
+			font-weight: bold;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.student-badge {
+		.badge-top {
+			width: 0;
+			border-bottom: 30px solid #c30;
+			border-left: 52px solid transparent;
+			border-right: 52px solid transparent;
+		}
+		.badge-bottom{
+			width: 0;
+			border-top: 30px solid #c30;
+			border-left: 52px solid transparent;
+			border-right: 52px solid transparent;
+		}
+		.badge-middle {
+			font-weight:normal;
+			width: 104px;
+			height: 60px;
+			line-height:60px;
+			background-color: #c30;
+			text-align:center;
+			text-transform:uppercase;
+			font-size:45px;
+			.second-letter {
+				font-weight: bold;
+			}
+		}
+	}
+
+
+}
+

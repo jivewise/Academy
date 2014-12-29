@@ -1,0 +1,422 @@
+$zen-column-count: 20;
+$zen-gutter-width: 0px;
+
+div#middle-ctrl {
+	@include zen-nested-container;
+
+	div.user-header {
+		margin:20px 0;
+		font-weight: bold;
+		overflow: hidden;
+		position: relative;
+		div.student-badge {
+		}
+		h3.name {
+			float: left;
+			margin-top: 0px;
+			span {
+				font-weight:normal;
+				font-size:16px;
+				color: #1b9af7;
+				border-bottom:2px solid #1b9af7;
+				cursor:pointer;
+			}
+			i.fa {
+				margin-left:10px;
+				display:inline-block;
+				color: #1b9af7;
+				font-size:16px;
+			}
+		}
+		a.delete {
+			float: right;
+			@extend .button;
+			@extend .button-primary;
+			margin-top: 10px;
+			padding: 0 20px;
+			font-size: 16px;
+		}
+	}
+
+	div.user-data {
+		@include zen-grid-item(20,1);
+		div.user-summary {
+			a.cancel {
+				display:block;
+				padding:10px 0;
+				line-height:36px;
+			}
+		}
+		div.user-achievements {
+			div.content {
+				div.achievement {
+					display: inline-block;
+					margin: 10px;
+					position: relative;
+					div.image {
+						background: white url("/images/achievements.png") 0 0 scroll no-repeat;
+						width: 57px;
+						height: 57px;
+						@include border-radius(50%);
+						@include box-shadow(1px 2px 2px rgba(0,0,0,.3));
+					}
+					div.popup {
+						display: none;
+						position: absolute;
+						right: -100px;
+						bottom: -65px;
+						width: 200px;
+						padding: 5px 10px;
+						background: white;
+						@include border-radius(3px);
+						@include box-shadow(1px 2px 2px rgba(0,0,0,.3));
+						line-height: 20px;
+						div.triangle {
+							position: absolute;
+							right: 122px;
+							top: -10px;
+							width: 0;
+							height: 0;
+							border: 5px solid transparent;
+							border-bottom-color: white;
+						}
+						div.name {
+							border-bottom: 1px dotted #aaa;
+						}
+						div.desc {
+							font-size: .8em;
+						}
+					}
+					&:hover {
+						div.popup {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	div.user-score-graph {
+		@include zen-clear(both);
+		@include zen-grid-item(20,1);
+		position: relative;
+
+		div#scores-tooltip {
+			@include border-radius(5px);
+			position:absolute;
+			width:100px;
+			padding:10px;
+			background:rgba(30, 30, 30, 0.8);
+			color:#fff;
+
+			.close {
+				cursor:pointer;
+				color: #fff;
+				border-radius: 15px;
+				width: 26px;
+				height: 26px;
+				position: absolute;
+				border: 2px solid #fff;
+				text-align: center;
+				top: -20px;
+				right: -20px;
+				background:rgba(52, 152, 219, 0.8);
+				line-height:25px;
+			}
+
+			.section-image img {
+				border:2px solid #aaa;
+				width:96px;
+				height:61px;
+			}
+
+			.sectionName {
+				font-size:12px;
+				border-bottom:1px dotted #aaa;
+				padding-bottom:5px;
+			}
+
+			.score, .average {
+				text-align:right;
+				font-size:16px;
+				padding:5px 0;
+			}
+
+			.score {
+				border-bottom:1px dotted #aaa;
+				color:rgb(143, 209, 0);
+			}
+			.average {
+				color:rgb(52, 152, 219);
+			}
+		}
+	}
+
+	div.user-score-list {
+		div.content {
+			div.list {
+				ul li {
+					span {
+						display: inline-block;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+					}
+					span.section-name {
+						width: 50%;
+					}
+					span.section-score {
+						width: 25%;
+					}
+					span.section-average {
+						width: 25%;
+					}
+				}
+			}
+		}
+	}
+
+	div.user-section {
+		margin: 20px auto;
+		max-width: 300px;
+		@include zen-clear(both);
+		@include zen-grid-item(20,1);
+		position: relative;
+		div.header {
+			width: 100%;
+			line-height: 60px;
+			overflow: hidden;
+			h3 {
+				float: left;
+				margin: 0;
+				font-weight: bold;
+			}
+			a.edit {
+				float: right;
+			}
+		}
+		div.content {
+			width: 100%;
+			background: white;
+			@include box-sizing(border-box);
+			border: 1px solid #ddd;
+			padding: 5px;
+			@include box-shadow(1px 3px 3px rgba(0,0,0,.3));
+			div.image {
+				img {
+					width: 100%;
+				}
+			}
+			div.text {
+				margin: 10px 0;
+				padding: 15px 0 5px;
+				border-top: 1px solid #ecf0f1;
+			}
+		}
+	}
+
+	div.history-list {
+		display: none; // hide the history beside the section image for now
+		margin: 20px auto;
+		@include zen-clear(both);
+		@include zen-grid-item(20,1);
+		div.header {
+			h3 {
+				font-weight: bold;
+				margin: 0;
+				line-height: 60px;
+			}
+		}
+		div.list {
+			ul {
+				li {
+					height: auto;
+					line-height: 40px;
+					text-transform:capitalize;
+				}
+			}
+		}
+	}
+
+
+	div.edit-user {
+		@include zen-grid-item(20,1);
+		div.user-header {
+			font-weight: bold;
+			h3 {
+				margin: 0;
+				display:inline-block;
+				line-height: 120px;
+			}
+			.reset-password {
+				margin-top:40px;
+				float:right;
+				@extend .button;
+				@extend .button-highlight;
+				padding: 0 20px;
+				font-size: 16px;
+			}
+		}
+		div.content {
+			div.fullname, div.phone {
+				label, input {
+					height: 30px;
+					line-height: 30px;
+					margin: 10px 0;
+				}
+				label {
+					font-weight: bold;
+					margin-right: 10px;
+				}
+				input {
+					display: block;
+					width: 100%;
+					text-indent: 5px;
+				}
+			}
+			div.message {
+				text-align: center;
+			}
+			div.btn-panel {
+				margin: 10px 0;
+				a, span {
+					margin-right: 10px;
+				}
+				a.btn-save, a.btn-cancel {
+					@extend .button;
+					@extend .button-primary;
+					float: right;
+					margin-left: 10px;
+				}
+				a.btn-cancel {
+					@extend .button-plain;
+				}
+			}
+		}
+	}
+
+	div.add-user {
+		@include zen-grid-item(20,1);
+		div.header {
+			font-weight: bold;
+			line-height: 60px;
+			h3 {
+				margin: 0;
+			}
+		}
+		div.content {
+			label, input {
+				height: 30px;
+				line-height: 30px;
+				margin: 10px 0;
+				display: block;
+			}
+			label {
+				font-weight: bold;
+				margin-right: 10px;
+			}
+			input {
+				display: block;
+				width: 100%;
+				text-indent: 5px;
+			}
+			input#set-password {
+				display: inline;
+				width: auto;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			div.message {
+				text-align: center;
+			}
+			div.btn-panel {
+				margin: 10px 0;
+				a, span {
+					margin-right: 10px;
+				}
+				a.btn-save, a.btn-cancel {
+					@extend .button;
+					@extend .button-primary;
+					float: right;
+					margin-left: 10px;
+				}
+				a.btn-cancel {
+					@extend .button-plain;
+				}
+			}
+		}
+	}
+
+	// image for section select
+	div.edit-user-section {
+		div.content {
+			div.section-list {
+				li {
+					height: auto;
+					line-height: 20px;
+					div.image {
+						margin-left: 10px;
+						img {
+							width: 280px;
+							margin-top: 5px;
+							height: auto;
+							// some images have transparent backgrounds
+							background: white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	div#middle-ctrl {
+		div.user-header {
+			div.student-badge {
+				float: left;
+				margin-right: 10px;
+			}
+			h3.name {
+				span {
+					font-size: 30px;
+					line-height: 120px;
+				}
+				i.fa {
+					font-size: 30px;
+				}
+			}
+			a.delete {
+				font-size: 22px;
+				padding: 0 30px;
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	div#middle-ctrl {
+		@include zen-nested-container;
+
+		div.user-score-graph {
+			@include zen-clear(both);
+			@include zen-grid-item(20,1);
+		}
+
+		div.user-section {
+			margin: 20px auto;
+			max-width: 300px;
+			@include zen-clear(left);
+			@include zen-grid-item(9,1);
+		}
+
+		div.history-list {
+			display: block;
+			@include zen-clear(none);
+			@include zen-grid-item(10,11);
+		}
+	}
+}

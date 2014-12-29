@@ -1,0 +1,74 @@
+!= getStylesheet('pages/users')
+div.content-wrapper.ng-cloak.is-list-view(data-ng-app="schoolApp" data-users-page data-ng-cloak)
+
+	div#left-ctrl(data-ng-controller="LeftController as left")
+		div.user-list(data-user-list-directive)
+
+	div#middle-ctrl(data-ng-controller="MiddleController as middle")
+		div.user-data(data-user-data-directive data-ng-show="middle.viewService.isUserDataView")
+		div.edit-user(data-edit-user-directive data-ng-show="middle.viewService.isEditUserView")
+		div.add-user(data-add-user-directive data-ng-show="middle.viewService.isAddUserView")
+		div.edit-user-section.modal(data-edit-user-section-directive data-ng-show="middle.viewService.isEditUserSectionView")
+
+	div#right-ctrl(data-ng-controller="RightController as right")
+		div.account-summary(data-account-summary-directive data-ng-hide="!right.viewService.isUserListView")
+		div.history-list(data-history-list-directive data-ng-hide="!right.viewService.isUserListView")
+
+
+	!= partial("users/templates")
+
+script(type="text/javascript")
+	if (users.length)
+		| window.users = !{users};
+	else
+		| window.users = [];
+
+
+<!-- build:js js/app.min.js -->
+script(type="text/javascript" src="vendor/respond.min.js")
+script(type="text/javascript" src="js/packager.js")
+script(type="text/javascript" src="vendor/angular-1.3.1/angular.js")
+script(type="text/javascript" src="vendor/Chart.min.js")
+script(type="text/javascript" src="vendor/underscore-min.js")
+script(type="text/javascript" src="vendor/validators.js")
+script(type="text/javascript" src="vendor/validator-util.js")
+script(type="text/javascript" src="vendor/validator-ext.js")
+script(type="text/javascript" src="vendor/moment.min.js")
+
+script(type="text/javascript" src="js/app.js")
+
+script(type="text/javascript" src="js/users/services/user.service.js")
+script(type="text/javascript" src="js/users/services/user.data.service.js")
+script(type="text/javascript" src="js/users/services/passport.service.js")
+script(type="text/javascript" src="js/users/services/product.service.js")
+script(type="text/javascript" src="js/services/history.service.js")
+script(type="text/javascript" src="js/users/services/view.service.js")
+
+script(type="text/javascript" src="js/users/controllers/left.controller.js")
+script(type="text/javascript" src="js/users/controllers/middle.controller.js")
+script(type="text/javascript" src="js/users/controllers/right.controller.js")
+
+script(type="text/javascript" src="js/directives/academy.input.directive.js")
+script(type="text/javascript" src="js/directives/academy.image.directive.js")
+
+script(type="text/javascript" src="js/users/directives/account.summary.directive.js")
+script(type="text/javascript" src="js/users/directives/account.summary.graph.directive.js")
+script(type="text/javascript" src="js/users/directives/user.list.directive.js")
+script(type="text/javascript" src="js/users/directives/user.list.item.directive.js")
+
+script(type="text/javascript" src="js/users/directives/user.data.directive.js")
+script(type="text/javascript" src="js/users/directives/user.summary.directive.js")
+script(type="text/javascript" src="js/users/directives/user.scores.graph.directive.js")
+script(type="text/javascript" src="js/users/directives/user.scores.list.directive.js")
+script(type="text/javascript" src="js/users/directives/user.badge.directive.js")
+script(type="text/javascript" src="js/users/directives/score.graph.tooltip.directive.js")
+script(type="text/javascript" src="js/users/directives/user.section.directive.js")
+script(type="text/javascript" src="js/users/directives/add.user.directive.js")
+script(type="text/javascript" src="js/users/directives/edit.user.directive.js")
+script(type="text/javascript" src="js/users/directives/edit.user.section.directive.js")
+script(type="text/javascript" src="js/users/directives/user.achievements.directive.js")
+script(type="text/javascript" src="js/users/directives/history.list.directive.js")
+script(type="text/javascript" src="js/users/directives/user.history.list.directive.js")
+
+script(type="text/javascript" src="js/validators/user.js")
+<!-- endbuild -->

@@ -1,0 +1,31 @@
+#student-details {
+	@include large-panel;
+	padding-left:20px;
+
+	.detail-header {
+		.student-badge {
+			float:left;
+			margin:0 20px 20px 0;
+		}
+
+		h2 {
+			line-height:120px;
+			text-transform:capitalize;
+		}
+		margin-bottom:20px;
+	}
+
+	div.actions {
+		height:50px;
+
+		a {
+			display:inline-block;
+			float:left;
+			width:25%;
+		}
+		a.delete {
+			color:#c30;
+			font-weight:bold;
+		}
+	}
+}

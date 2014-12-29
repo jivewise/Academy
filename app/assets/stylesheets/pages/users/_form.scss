@@ -1,0 +1,67 @@
+#student-add-form,
+#student-edit-form {
+	@include large-panel;
+
+	padding:10px 50px;
+
+	h4 {
+		text-align:center;
+		text-transform:capitalize;
+
+		span.name {
+			color:#c30;
+		}
+	}
+	label {
+		display:block;
+		margin-top:1em;
+		font-weight:bold;
+	}
+	label.for-checkbox {
+		display:inline-block;
+		margin-left:5px;
+	}
+	input#fullname {
+		text-transform:capitalize;
+	}
+	input[type="password"],
+	input[type="text"] {
+		@include border-radius(3px);
+		@include box-sizing(border-box);
+		width:100%;
+		padding:5px 10px;
+		margin-top:8px;
+		border:1px solid #ddd;
+	}
+	hr {
+		border: 1px dotted #3498db;
+		border-top: 0;
+		width: 50%;
+		margin-top: 2em;
+	}
+	div.btn-container {
+		text-align:center;
+
+		a.btn-save {
+			@include btn-primary();
+			margin:1em 20px 1em 0;
+		}
+		a.btn-save:hover {
+			@include btn-primary-hover();
+		}
+
+		a.cancel {
+			@include cancel-link();
+			margin:1em 0 1em 20px;
+		}
+		a.cancel:hover {
+			@include cancel-link-hover();
+		}
+	}
+
+	div.submit-spinner {
+		background:url(/images/spinner.gif) no-repeat 50% 50%;
+		height:100px;
+		width:100%;
+	}
+}

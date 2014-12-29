@@ -1,0 +1,28 @@
+{
+	"method": "POST",
+	"path": "/userHistory/getRecentActivities/cee80465972555475599b2fb3f81c1593acfd6c6",
+	"data": {"user_ids": ["847"], "length": 10},
+	"code": 200,
+	"response": [
+		{
+			"user_id": "847",
+			"change_text": " \u5b8c\u6210\u4e86 Animals 1\uff0c\u5f97\u5206 100",
+			"id": "3422",
+			"entry_time": "1418186137",
+			"type": "section_completed",
+			"info": null,
+			"avatar": "avatars\/elephant.png",
+			"displayName": "hulk"
+		},
+		{
+			"user_id": "847",
+			"change_text": "\u5f00\u59cb\u5b66\u4e60 Animals 1",
+			"id": "3421",
+			"entry_time": "1418186073",
+			"type": "section_started",
+			"info": "4",
+			"avatar": "avatars\/elephant.png",
+			"displayName": "hulk"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+!= getStylesheet('pages/login')
+div#app-container
+	form#login(name="login" action="/login/post" method="post")
+		h1 Login
+		input#user(name="user" type="text" placeholder="username")
+		input#pass(name="pass" type="text" placeholder="password")
+		label.remember
+			input#remember(name="remember" value="true" type="checkbox")
+			| Remember Me
+		input#submit(type="submit" value="Login")

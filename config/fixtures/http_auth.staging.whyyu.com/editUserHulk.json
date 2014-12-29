@@ -1,0 +1,31 @@
+{
+	"method": "POST",
+	"path": "/applications/whyyu_create/owner/38/update-user/?writer=json",
+	"data": {
+		"id": "847",
+		"username": "hulk@baidu.com",
+		"role": null,
+		"fullname": "Hulk smash",
+		"email": "hulk@baidu.com",
+		"phone": "123",
+		"date_created": "2014-12-10 10:57:33",
+		"passport": {
+			"id": "894",
+			"application": "whyyu_create",
+			"code": "2d51ef2619",
+			"num_days_valid": "30",
+			"start_dt": "2014-12-10 10:57:33",
+			"created_dt": "2014-11-27 16:16:34",
+			"activated_dt": "2014-12-10 10:57:33",
+			"affiliate_id": null,
+			"owner_id": "38",
+			"user_id": "847",
+			"username": "hulk@baidu.com"
+		},
+		"score": 100,
+		"section_id": "238",
+		"latest_section": "Section 4 - Animals 1",
+		"token": "cee80465972555475599b2fb3f81c1593acfd6c6"
+	},
+	"code": 200
+}

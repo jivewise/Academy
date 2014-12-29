@@ -1,0 +1,6 @@
+{
+	"method": "POST",
+	"path": "/applications/whyyu_create/owner/38/delete-user/?writer=json",
+	"data": {"token":"cee80465972555475599b2fb3f81c1593acfd6c6","username":"hulk@baidu.com"},
+	"code": 200
+}

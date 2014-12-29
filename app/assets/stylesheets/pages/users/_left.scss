@@ -1,0 +1,113 @@
+div#left-ctrl {
+	div.filter-users {
+		padding: 10px 0;
+		input {
+			line-height: 30px;
+			text-indent: 5px;
+			width: 100%;
+			@include box-sizing(border-box);
+		}
+	}
+
+	// users list
+	div.list {
+		ul {
+			li {
+				span {
+					display: inline-block;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				span.id {
+					width: 20%;
+					text-align: center;
+				}
+				span.name {
+					width: 80%;
+				}
+				span.section {
+					display: none;
+				}
+				span.score {
+					display: none;
+				}
+			}
+			li.user {
+				cursor: pointer;
+				span.name {
+					i.fa {
+						display: none;
+					}
+				}
+				span.score {
+					text-indent: 5px;
+				}
+				&:hover {
+					@include list-item-hover;
+				}
+			}
+			li.active {
+				@include list-item-hover;
+				span.name {
+					i.fa {
+						display: inline-block;
+						height: 40px;
+						line-height: 40px;
+						float: right;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	div.no-users {
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	a.btn-add-user {
+		margin: 10px 0;
+		@extend .button;
+		@extend .button-primary;
+		@extend .button-block;
+		@extend .button-large;
+	}
+
+	div.max-users {
+		text-align: center;
+		padding: 10px 0;
+	}
+}
+
+
+@media (min-width: 1024px) {
+	div#left-ctrl {
+		// users list
+		div.list {
+			ul {
+				li {
+					span.id {
+						width: 20%;
+					}
+					span.name {
+						width: 80%;
+					}
+					span.section {
+						display: none;
+					}
+					span.score {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

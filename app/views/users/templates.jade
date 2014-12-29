@@ -1,0 +1,239 @@
+script#academy-input-tpl(type="text/ng-template")
+	label(for="{{inputId}}") {{ inputLabel }}
+	input(id="{{inputId}}" type="{{inputType ? inputType : 'text'}}"
+		data-ng-model="inputModel" placeholder="{{inputLabel}}")
+	span.input-error(data-ng-transclude)
+
+script#academy-image-tpl(type="text/ng-template")
+	img(ng-src="{{image}}")
+
+// account summary; right controller
+script#account-summary-tpl(type="text/ng-template")
+	div.header
+		h3 School Summary
+	div.graph(data-account-summary-graph-directive) &nbsp;
+	div.graph-caption
+		p {{right.userService.users.length}} / {{ right.passportService.passports.length }} Students
+
+script#account-summary-graph-tpl(type="text/ng-template")
+	canvas#account-summary-chart(width="250" height="250")
+
+// user list; left controller
+script#user-list-tpl(type="text/ng-template")
+	div.filter-users
+		input(data-ng-model="searchUser.$" type="text" placeholder="Type Here To Search Students")/
+	div.list
+		ul
+			li.header
+				span.id &nbsp;
+				span.name Name
+				span.section Section
+				span.score Score
+			li.user(data-ng-class="{'active': left.userService.user == user}" data-ng-repeat="user in left.userService.users | filter:searchUser | orderBy:'fullname'"  data-ng-click="showUserData(user)" data-user-list-item-directive)
+	div.no-users(data-ng-show="!left.userService.users.length")
+		| Please click the button below to add students to your school.
+	a.btn-add-user(ng-click="showAddUser()" data-ng-show="left.passportService.hasAvailablePassport") Add Student
+	div.max-users(data-ng-show="!left.passportService.hasAvailablePassport")
+		p You already have the maximum number of allowed students.
+		a.upgrade-account(href="/acount#upgrade") Upgrade your account
+		|  to add more students to your school!
+
+// use list item; left controller
+script#user-list-item-tpl(type="text/ng-template")
+	span.id {{$index+1}}. &nbsp;
+	span.name {{user.fullname}}
+		i.fa.fa-chevron-right
+	span.section {{user.latest_section}}
+	span.score  {{user.score}}
+
+// user detals; middle controller
+script#user-data-tpl(type="text/ng-template")
+	div.user-summary(data-user-summary-directive)
+	div.user-score-graph(data-user-scores-graph-directive data-ng-hide="middle.userDataService.scoreData.scores.length < 4")
+	div.user-score-list(data-user-scores-list-directive data-ng-show="middle.userDataService.scoreData.scores.length > 0 && middle.userDataService.scoreData.scores.length < 4")
+	//div.user-goals(data-user-goals-directive)
+	div.user-section(data-user-section-directive)
+	div.history-list(data-user-history-list-directive data-ng-show="middle.historyService.user_histories.length")
+
+script#user-scores-list-tpl(type="text/ng-template")
+	div.header
+		h3 Latest Scores
+	div.content
+		div.list
+			ul
+				li.header
+					span.section-name Section
+					span.section-score Score
+					span.section-average Average
+				li(data-ng-repeat="score in score_list")
+					span.section-name {{ score.section_name }}
+					span.section-score {{ score.section_score }}
+					span.section-average {{ score.section_average }}
+
+script#student-badge-tpl(type="text/ng-template")
+	div.student-badge 
+		div.badge-top
+		div.badge-middle {{firstLetter}}
+			span.second-letter {{secondLetter}}
+		div.badge-bottom
+
+// user summary; middle controller
+script#user-summary-tpl(type="text/ng-template")
+	a.cancel(data-ng-click="cancel()")
+		i.fa.fa-undo &nbsp;
+		| Back To School Summary
+	div.user-header
+		div(data-student-badge data-student="middle.userService.user")
+		h3.name(data-ng-click="showEditUser()") 
+			span {{ middle.userService.user.fullname }}
+			i.fa.fa-edit &nbsp;
+			
+		a.delete(data-ng-click="showDeleteUser()")
+			i.fa.fa-remove &nbsp;
+			| Delete
+
+
+// user score graph; middle controller
+script#user-scores-graph-tpl(type="text/ng-template")
+	div.header
+		h3 Latest Grades
+	canvas#scores-graph(data-ng-mousemove="updateTooltip($event)" data-ng-mouseout="hideTooltip()")
+	div#scores-tooltip(data-score-graph-tooltip-directive data-score="pointScore" data-ng-show="displayTooltip" ng-style="{left:tipX, top:tipY}")
+
+// score tooltip; middle controller
+script#score-graph-tooltip-tpl(type="text/ng-template")
+	div.section-image(data-academy-image-directive data-image-src="{{ sectionImage }}")
+	div.section-name {{ sectionName }}
+	div.score {{ grade }}
+	div.average Average: {{ average }}
+	div.close(data-ng-click="parent.hideToolTip()") x
+
+// user goals; middle controller; todo
+script#user-goals-tpl(type="text/ng-template")
+
+// user sections; middle controller; todo
+script#user-section-tpl(type="text/ng-template")
+	div.header
+		h3.user-section Current Section
+	div.content(data-ng-hide="!middle.userDataService.section")
+		div.image(data-academy-image-directive data-image-src="{{ middle.userDataService.section.section_image }}")
+		div.text {{ middle.userDataService.section.section_number + ". " + middle.userDataService.section.section_name }}
+
+// edit user section; middle controller
+script#edit-user-section-tpl(type="text/ng-template")
+	div.header
+		span.title
+			a.back-to-chapter-list(data-ng-show="isSectionListView" data-ng-click="showChapterList()")
+				i.fa.fa-chevron-left
+		| {{ isSectionListView ? "Sections" : "Chapters" }}
+		a.close(data-ng-click="closeModal()")
+	div.content
+		div.list.chapter-list(data-ng-hide="isSectionListView")
+			ul
+				li(data-ng-repeat="chapter in middle.productService.chapters" data-ng-click="showSectionList(chapter)" data-ng-class="{'active': middle.productService.chapter == chapter}")
+					span {{ chapter.product_chapter_name }}
+		div.list.section-list(data-ng-hide="!isSectionListView")
+			ul
+				li(data-ng-repeat="section in middle.productService.sections" data-ng-class="{'active': middle.productService.section == section}" data-ng-click="editUserSection(section)")
+					div.image(data-academy-image-directive data-image-src="{{ section.image }}")
+					span {{ section.number + ". " + section.name }}
+
+
+// user achievements; middle controller; todo
+script#user-achievements-tpl(type="text/ng-template")
+	div.content
+		div.achievement(data-ng-repeat="achievement in middle.userDataService.achievements")
+			div.image(style="background-position:{{ -achievement.image }}px 0")
+			div.popup
+				div.triangle
+				div.name {{ achievement.name }}
+				div.desc {{ achievement.description }}
+
+// edit user; middle controller
+script#edit-user-tpl(type="text/ng-template")
+	div.user-header
+		div(data-student-badge data-student="middle.userService.user")
+		h3 Editing - {{middle.userService.user.fullname}}
+		a.reset-password(data-ng-click="showResetPassword()")
+			i.fa.fa-key &nbsp;
+			| Reset Password
+
+	div.content
+		div.fullname(data-academy-input-directive data-input-id="fullname" data-input-model="middle.userService.user.fullname"
+			data-input-label="Name" data-ng-class="{inputError: error.fullname}").
+			Please enter the fullname of the student
+
+		div.phone(data-academy-input-directive data-input-id="phone" data-input-model="middle.userService.user.phone"
+			data-input-label="Phone" data-ng-class="{inputError: error.phone}" ).
+			Please enter a valid phone number for the student
+
+		div.inputError(data-ng-show="error.message")
+			span.input-error {{ error.message }}
+		hr
+
+		div.btn-panel(data-ng-hide="isSubmitting")
+			a.btn-save(data-ng-click="editUser()") OK
+			a.btn-cancel(data-ng-click="cancel()") Cancel
+		div.submit-spinner(data-ng-show="isSubmitting")
+
+// add user; middle controller
+script#add-user-tpl(type="text/ng-template")
+	div.header
+		h3 Add Student - {{middle.userService.user.fullname}}
+	div.content
+		div.fullname(data-academy-input-directive data-input-id="fullname" data-input-model="middle.userService.user.fullname"
+			data-input-label="Name" data-ng-class="{inputError: error.fullname}").
+			Please enter the fullname of the student
+
+		div.email(data-academy-input-directive data-input-id="email" data-input-model="middle.userService.user.email"
+			data-input-label="E-Mail" data-ng-class="{inputError: error.email}" ).
+			Please enter a valid email address for the student
+
+		div.phone(data-academy-input-directive data-input-id="phone" data-input-model="middle.userService.user.phone"
+			data-input-label="Phone" data-ng-class="{inputError: error.phone}" ).
+			Please enter a valid phone number for the student
+
+		div.set-password
+			label.for-checkbox(for="set-password")
+				input#set-password(type="checkbox" data-ng-model="generate_password")
+				| Generate password
+
+		// this is within this scope
+		div.animate-hide.animate-show(data-ng-hide="generate_password")
+			div.password(data-academy-input-directive data-input-id="password" data-input-model="middle.userService.user.password"
+				data-input-type="password"
+				data-input-label="Password" data-ng-class="{inputError: error.password || error.confirm}" )
+					span(data-ng-show="error.password") Passwords must be at least 5 characters
+					span(data-ng-show="error.confirm") Password and confirm password must be the same
+
+			div.confirm(data-academy-input-directive data-input-id="confirm" data-input-type="password" data-input-model="middle.userService.user.confirm"
+				data-input-label="Confirm Password" data-ng-class="{inputError: error.confirm}" )
+
+		div.inputError(data-ng-show="error.message")
+			span.input-error {{ error.message }}
+
+		hr
+		div.btn-panel(data-ng-hide="isSubmitting")
+			a.btn-save(data-ng-click="addUser()") OK
+			a.btn-cancel(data-ng-click="cancel()") Cancel
+
+		div.submit-spinner(data-ng-show="isSubmitting")
+
+// history directive; right controller
+script#history-list-tpl(type="text/ng-template")
+	div.header
+		h3 Recent Student Activities
+	div.list
+		ul
+			li(data-ng-repeat="history in right.historyService.histories")
+				span.text {{ history.change_text }}
+
+// history directive; middle controller
+// this appears next to the user section image
+script#user-history-list-tpl(type="text/ng-template")
+	div.header
+		h3 Recent Student Activities
+	div.list
+		ul
+			li(data-ng-repeat="history in middle.historyService.user_histories")
+				span.text {{ history.change_text }}

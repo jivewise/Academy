@@ -1,0 +1,14 @@
+.input-error {
+	display:none;
+	font-size: 14px;
+	color: red;
+}
+
+.inputError {
+	.input-error {
+		display:block;
+	}
+	input[type="text"] {
+		background:#ffdddd;
+	}
+}

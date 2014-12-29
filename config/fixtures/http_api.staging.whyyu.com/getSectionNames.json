@@ -1,0 +1,18 @@
+{
+	"method": "POST",
+	"path": "/sectionNames?writer=json",
+	"data": {"sections": "236,239,259,238", "token": "cee80465972555475599b2fb3f81c1593acfd6c6"},
+	"code": 200,
+	"response": [
+		{
+			"id": "236",
+			"chapter_id": "38",
+			"number": "1",
+			"name": "Hello!",
+			"image": "grade1n\/Hello-chinese.png"
+		},
+		{"id": "238", "chapter_id": "38", "number": "4", "name": "Animals 1", "image": "grade1n\/Cow.png"},
+		{"id": "239", "chapter_id": "38", "number": "5", "name": "Numbers (1-10)", "image": "grade1n\/1.png"},
+		{"id": "259", "chapter_id": "38", "number": "9", "name": "Colors", "image": "grade1n\/Black.png"}
+	]
+}

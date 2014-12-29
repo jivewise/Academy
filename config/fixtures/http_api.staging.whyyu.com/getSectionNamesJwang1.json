@@ -1,0 +1,57 @@
+{
+	"method": "POST",
+	"path": "/sectionNames?writer=json",
+	"data": {
+		"sections": "236,793,792,379,600,602,599,874,241,238",
+		"token": "cee80465972555475599b2fb3f81c1593acfd6c6"
+	},
+	"code": 200,
+	"response": [
+		{
+			"id": "236",
+			"chapter_id": "38",
+			"number": "1",
+			"name": "Hello!",
+			"image": "grade1n\/Hello-chinese.png"
+		},
+		{"id": "238", "chapter_id": "38", "number": "4", "name": "Animals 1", "image": "grade1n\/Cow.png"},
+		{"id": "241", "chapter_id": "38", "number": "10", "name": "Classroom", "image": "grade1n\/Teacher.png"},
+		{
+			"id": "600",
+			"chapter_id": "38",
+			"number": "11",
+			"name": "This, that, these, those",
+			"image": "grade1n\/This-is-a-teacher.png"
+		},
+		{
+			"id": "379",
+			"chapter_id": "51",
+			"number": "1",
+			"name": "Describing things",
+			"image": "grade6\/How-long-is-the-Eiffel-Tower.png"
+		},
+		{"id": "602", "chapter_id": "38", "number": "12", "name": "Classroom items", "image": "grade1n\/Ruler.png"},
+		{
+			"id": "792",
+			"chapter_id": "51",
+			"number": "2",
+			"name": "People I know",
+			"image": "grade6\/My-best-friend.png"
+		},
+		{
+			"id": "793",
+			"chapter_id": "51",
+			"number": "3",
+			"name": " Personal possessions",
+			"image": "grade6\/Tim-has-a-dog-1.png"
+		},
+		{"id": "599", "chapter_id": "38", "number": "6", "name": "People", "image": "grade1n\/Aboy.png"},
+		{
+			"id": "874",
+			"chapter_id": "38",
+			"number": "14",
+			"name": "Article - Cats and dogs",
+			"image": "grade1n\/There-are-3-white-cats-and-5-yellow-dogs.png"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+$zen-column-count: 1;
+$zen-gutter-width: 20px;
+
+$footer-height: 50px;
+
+// {{ this is mostly for the sticky footer
+html, body {
+	height: 100%;
+	font-family: "roboto", sans-serif;
+	color: #34495e;
+}
+
+div.page-wrapper {
+	@include zen-grid-container;
+	background: #ecf0f1;
+	min-height: 100%;
+	margin: 0 auto (-$footer-height); // this bottom margin should be the same with footer height
+	&:after {
+		content: "";
+		display: block;
+	}
+}
+
+// this is mostly for the stick footer }}
+
+
+@mixin full-panel {
+	width: 100%;
+	clear: both;
+	@include box-sizing('border-box');
+}
+
+@mixin large-panel {
+	width: 65%;
+	float: left;
+	@include box-sizing('border-box');
+}
+
+@mixin small-panel {
+	width: 35%;
+	float: left;
+	@include box-sizing('border-box');
+}
+
+// prevent unstyled content right after page load
+.ng-cloak {
+	display: none!important;
+}

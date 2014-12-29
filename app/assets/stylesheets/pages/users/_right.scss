@@ -1,0 +1,47 @@
+div#right-ctrl {
+
+	div.account-summary {
+		margin: 20px 0;
+		text-align: center;
+		div.header {
+			h3 {}
+		}
+		div.graph {
+			display: inline-block;
+			// if not set to important, the canvas size fails on iOS devices
+			canvas#account-summary-chart {
+				max-width: 300px;
+				max-height: 300px;
+			}
+		}
+		div.graph-caption {
+			margin: 20px 0;
+			text-align: center
+		}
+	}
+
+	div.history-list {
+		margin: 20px 0;
+		div.header {
+			h3 {
+				font-weight: bold;
+			}
+		}
+		div.list {
+			ul {
+				li {
+					height: auto;
+					line-height: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	div#right-ctrl {}
+}
+
+@media (min-width: 1024px) {
+	div#right-ctrl {}
+}

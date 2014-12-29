@@ -1,0 +1,28 @@
+{
+	"method": "POST",
+	"path": "/userHistory/getRecentActivities/cee80465972555475599b2fb3f81c1593acfd6c6",
+	"data": {"user_ids": ["845"], "length": 10},
+	"code": 200,
+	"response": [
+		{
+			"user_id": "845",
+			"change_text": " \u5b8c\u6210\u4e86 Numbers (1-10)\uff0c\u5f97\u5206 95",
+			"id": "3420",
+			"entry_time": "1418186027",
+			"type": "section_completed",
+			"info": null,
+			"avatar": "avatars\/chicken.png",
+			"displayName": "captain america"
+		},
+		{
+			"user_id": "845",
+			"change_text": "\u5f00\u59cb\u5b66\u4e60 Numbers (1-10)",
+			"id": "3419",
+			"entry_time": "1418185963",
+			"type": "section_started",
+			"info": "5",
+			"avatar": "avatars\/chicken.png",
+			"displayName": "captain america"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"method": "PUT",
+	"path": "/tokens/cee80465972555475599b2fb3f81c1593acfd6c6?writer=json",
+	"data": {"ipAddress": "127.0.0.1"},
+	"code": 200,
+	"response": {
+		"id": "4947",
+		"value": "cee80465972555475599b2fb3f81c1593acfd6c6",
+		"date_updated": "2014-12-10 06:03:51",
+		"token_length": "1800",
+		"application": "whyyu_create",
+		"ip_address": "127.0.0.1",
+		"user_id": "38",
+		"groupMemberships": "9,10,69,70",
+		"groupMembersName": "{\"9\":\"admin\",\"10\":\"passportAdmin\",\"69\":\"class 1\",\"70\":\"class 2\"}",
+		"username": "jwang"
+	}
+}

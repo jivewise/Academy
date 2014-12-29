@@ -1,0 +1,27 @@
+@function image($path) {
+	@return url("/images/#{$path}");
+}
+
+@mixin font-url($font) {
+	src: local("#{$font}"),
+	url("/fonts/#{$font}.eot?#iefix") format("embedded-opentype"),
+	url("/fonts/#{$font}.woff") format("woff"),
+	url("/fonts/#{$font}.ttf") format("truetype");
+}
+
+// for clickable list item
+@mixin list-item-hover {
+	background: #1b9af7;
+	color: #fff;
+}
+
+div.submit-spinner {
+	background:url(/images/spinner.gif) no-repeat 50% 50%;
+	height:100px;
+	width:100%;
+}
+
+// fix normalize left padding 40px bug
+ul {
+	padding: 0;
+}
