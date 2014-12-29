@@ -2,16 +2,16 @@ Academy Code Sample
 ===================
 
 ## Frontend code locations of interest:
-Stylesheets (SASS) - /app/assets/stylesheets/
-Javascript (Angular) - /public/js/
-Markup (Jade) - /app/views/
+1. Stylesheets (SASS) - /app/assets/stylesheets/
+1. Javascript (Angular) - /public/js/
+1. Markup (Jade) - /app/views/
 
 ## Backend code locations of interest:
-MVC (CompoundJS) - /app/
-Services (Node) - /app/services/
-Tests (Mocha)- /tests/back/
-Fixture Loaders - /config/fixture-loader.js
-Fixtures - /config/fixtures/
+1. MVC (CompoundJS) - /app/
+1. Services (Node) - /app/services/
+1. Tests (Mocha)- /tests/back/
+1. Fixture Loaders - /config/fixture-loader.js
+1. Fixtures - /config/fixtures/
 
 ## Steps for running the server:
 1. Set environment variable - "NODE_ENV=development"
